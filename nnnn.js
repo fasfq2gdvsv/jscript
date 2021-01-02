@@ -64,7 +64,7 @@ wait(random(300,1000));
 // находим заголовок "принцип действия"
 var elem = document.querySelectorAll('div');
 // Выполняем прокрутку
-wheel(random(1,2));
+wheel(1);
 print('Страница прокручена на ' + window.scrollY + 'px');
 // Перемещаем мышь в точку (10, 10)
 // из точки (200, 300) за 1 сек.
@@ -77,7 +77,7 @@ print(elem.length)
 // Перемещаем мышь к заголовку "принцип действия" за 8 сек.
 move(random(1500,2500), elem[random(5,elem.length)]);
 
-wheel(random(1,2));
+wheel(1);
 move(random(700,1500), random(100,1500), random(100,3500));
 
 set('popup', 1, 'openwin', 1);
@@ -85,6 +85,10 @@ click('viewport', 'custom', '0:0:width:height');
 wait(random(150,3500));
 move(random(700,2500), random(100,1500), random(100,3500));
 
+
+activateTab(1);
+wait(random(500,1000));
+move(random(700,1500), random(100,1500), random(100,3500));
 
 activateTab(1);
 wait(random(500,1000));
