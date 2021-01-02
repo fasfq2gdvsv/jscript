@@ -88,7 +88,10 @@ move(random(700,2500), random(100,1500), random(100,3500));
 
 activateTab(1);
 wait(random(500,1000));
-move(random(700,1500), random(100,1500), random(100,3500));
+move(random(700,1000), random(100,1500), random(100,3500));
+move(random(700,1000), random(100,1500), random(100,3500));
+move(random(700,1000), random(100,1500), random(100,3500));
+
 
 activateTab(1);
 wait(random(500,1000));
