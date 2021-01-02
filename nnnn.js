@@ -58,7 +58,7 @@ navigate('https://www.moneyfromweb.ga/', items[random(0,items.length)]);
 wait(random(1700,2500));
 
 // Перемещаем мышь в точку (100, 100) за 1.5 сек.
-move(random(900,2000), random(100,1500), random(100,3500));
+move(random(900,2000), random(100,1500), random(100,2500));
 wait(random(300,1000));
 
 // находим заголовок "принцип действия"
@@ -68,7 +68,7 @@ wheel(1);
 print('Страница прокручена на ' + window.scrollY + 'px');
 // Перемещаем мышь в точку (10, 10)
 // из точки (200, 300) за 1 сек.
-move(random(900,2500), random(100,1500), random(100,3500));
+move(random(900,2500), random(100,1500), random(100,2500));
 wait(random(300,1000));
 
 
@@ -78,21 +78,22 @@ print(elem.length)
 move(random(1500,2500), elem[random(5,elem.length)]);
 
 wheel(1);
-move(random(700,1500), random(100,1500), random(100,3500));
+move(random(700,1500), random(100,1500), random(100,2500));
 
 set('popup', 1, 'openwin', 1);
 click('viewport', 'custom', '0:0:width:height');
 wait(random(150,3500));
-move(random(700,2500), random(100,1500), random(100,3500));
+move(random(700,1500), random(100,1500), random(100,2500));
+move(random(700,1000), random(100,1500), random(100,2500));
+
+activateTab(1);
+wait(random(500,1000));
+move(random(700,1000), random(100,1500), random(100,2500));
+move(random(700,1000), random(100,1500), random(100,2500));
 
 
 activateTab(1);
 wait(random(500,1000));
-move(random(700,1000), random(100,1500), random(100,3500));
-move(random(700,1000), random(100,1500), random(100,3500));
-move(random(700,1000), random(100,1500), random(100,3500));
+move(random(700,1500), random(100,1500), random(100,2500));
 
-
-activateTab(1);
-wait(random(500,1000));
-move(random(700,1500), random(100,1500), random(100,3500));
+move(random(700,1000), random(100,1500), random(100,2500));
