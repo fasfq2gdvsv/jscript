@@ -72,10 +72,8 @@ move(random(900,2500), random(100,1500), random(100,2500));
 wait(random(300,1000));
 
 
-print(elem)
-print(elem.length)
 // Перемещаем мышь к заголовку "принцип действия" за 8 сек.
-move(random(1500,2500), elem[random(5,elem.length)]);
+move(random(900,2500), random(100,1500), random(100,3500));
 
 wheel(1);
 move(random(700,1500), random(100,1500), random(100,2500));
