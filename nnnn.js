@@ -73,7 +73,7 @@ wait(random(300,1000));
 
 
 // Перемещаем мышь к заголовку "принцип действия" за 8 сек.
-move(random(900,2500), random(100,1500), random(100,3500));
+move(random(900,1500), random(100,1500), random(100,3500));
 
 wheel(1);
 move(random(700,1500), random(100,1500), random(100,2500));
@@ -84,9 +84,10 @@ wait(random(150,3500));
 move(random(700,1500), random(100,1500), random(100,2500));
 move(random(700,1000), random(100,1500), random(100,2500));
 
-activateTab(0);
+activateTab(1);
 wait(random(500,1000));
 move(random(700,1000), random(100,1500), random(100,2500));
 move(random(700,1000), random(100,1500), random(100,2500));
 
+activateTab(0);
 move(random(700,1000), random(100,1500), random(100,2500));
