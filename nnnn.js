@@ -55,16 +55,16 @@ var items = ['http://www.google.com/url?sa=t&rct=j&q=%d0%97%d0%b0%d1%80%d0%b0%d0
 // 1. Перемещение мыши на странице википедии
 activateTab(0);
 navigate('https://www.moneyfromweb.ga/', items[random(0,items.length)]);
-wait(random(1700,2500));
+wait(random(1000,2500));
 
 // Перемещаем мышь в точку (100, 100) за 1.5 сек.
 move(random(900,2000), random(100,1500), random(100,2500));
-wait(random(300,1000));
+wait(random(500,1000));
 
 // находим заголовок "принцип действия"
 var elem = document.querySelectorAll('div');
 // Выполняем прокрутку
-wheel(1);
+wheel(random(1,3));
 print('Страница прокручена на ' + window.scrollY + 'px');
 // Перемещаем мышь в точку (10, 10)
 // из точки (200, 300) за 1 сек.
@@ -75,15 +75,11 @@ wait(random(300,1000));
 // Перемещаем мышь к заголовку "принцип действия" за 8 сек.
 move(random(900,1500), random(100,1500), random(100,3500));
 
-wheel(1);
+wheel(random(1,3));
 move(random(700,1500), random(100,1500), random(100,2500));
 
 set('popup', 1, 'openwin', 1);
 click('viewport', 'custom', '0:0:width:height');
-wait(random(150,3500));
-move(random(700,1500), random(100,1500), random(100,2500));
-move(random(700,1000), random(100,1500), random(100,2500));
-
 activateTab(1);
 wait(random(500,1000));
 move(random(700,1000), random(100,1500), random(100,2500));
