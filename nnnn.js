@@ -100,9 +100,11 @@ main_cycle()
 set('popup', 1, 'openwin', 1);
 click('viewport', 'custom', '0:0:width:height');
 activateTab(1);
+wait(random(1000,2000));
 main_cycle()
 main_cycle()
 
 // 3. сайт
 activateTab(0);
+wait(random(1000,2000));
 main_cycle()
