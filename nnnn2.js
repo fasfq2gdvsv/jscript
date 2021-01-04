@@ -71,16 +71,11 @@ move(random(1500,2500), random(100,1500), random(100,3500));
 wheel(random(1,4));
 set('popup', 1, 'openwin', 1);
 click('viewport', 'custom', '0:0:width:height');
-wait(random(1500,2500));
-move(random(700,1500), random(100,1500), random(100,2500));
-move(random(900,2000), random(100,1500), random(100,2500));
-
 activateTab(1);
 wait(random(500,1000));
-move(random(700,1000), random(100,1500), random(100,2500));
-wheel(random(1,3));
-move(random(700,1000), random(100,1500), random(100,2500));
-move(random(700,1500), random(100,1500), random(100,2500));
+move(random(700,1000), random(100,1500), random(50,3500));
+move(random(700,1000), random(100,1500), random(50,3500));
+move(random(700,1500), random(100,1500), random(50,3500));
 
 activateTab(0);
 wait(random(500,1000));
