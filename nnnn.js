@@ -50,40 +50,58 @@ var items = ['http://www.google.com/url?sa=t&rct=j&q=%d0%97%d0%b0%d1%80%d0%b0%d0
 'http://www.google.com/aclk?sa=L&ai=WIqRKchntFsZPBDamnkoMAUQNghbOnwSnnbBgnCEjaSJYhBfkcjSsYwlQqitYzjogMVDwjnQegxk-lvaJEYHIJezBYBGKznncytoZASWnjanDszPynFRgqqNmykVZaaslnbVFGKUzTLZiyufFFaXyxACTUahXkR&num=1&sig=Y_UJhVbKuIDoIIlZmTOY_HYnfeKItrdWCB&rct=j&q=%d0%9b%d1%83%d1%87%d1%88%d0%b8%d0%b5+%d1%81%d0%b0%d0%b9%d1%82%d1%8b+%d0%b4%d0%bb%d1%8f+%d1%80%d0%b0%d0%b1%d0%be%d1%82%d1%8b+%d0%b4%d0%be%d0%bc%d0%b0&ved=0CFYQFjADOAE&adurl=https%3a%2f%2fwww.moneyfromweb.ga%2f&cad=rjt',
 'http://www.google.com/aclk?sa=L&ai=JmlKLhBoeFmHJkJotGkcOtFYjgRVAFTcSbpULjoeaJSHXzGgBCzjNgJgddeudWNHORTCIPJjoGSzLmfmMJ-kCHBNubViFEloxnUJhxiFTROPeNCg-tUCEpvcoijSgseuNy-VlBAisfdLUFbE&num=3&sig=oiavVtAEFpIRXqXwrsnN_brXwsJnrfXsiS&rct=j&q=%d0%a2%d0%be%d0%bf+%d0%b1%d1%83%d0%ba%d1%81%d0%be%d0%b2&ved=0CFYQFjAF&adurl=https%3a%2f%2fwww.moneyfromweb.ga%2f&cad=rjt'];
 
+function nool() {
+  wait(random(500,1000));
+}
+
+function first() {
+  move(random(900,1500), random(100,1500), random(100,3500));
+}
+
+function second() {
+  wheel(random(1,4));
+}
+
+function main_cycle() {
+  
+	var rand_dig = [0,1,2,1,2,1,2];
+  array1 = [];
+
+  for(countCycles=0;countCycles<=Math.floor(Math.random() * 4);countCycles++)			{
+      array1.push(rand_dig[random(0, (rand_dig.length-1))]);  
+  		}
+	for(countCycles=0;countCycles<=(array1.length)-1; countCycles++)	{    
+       if (array1[countCycles] == 1) {
+					  first();  
+        } else if (array1[countCycles] == 2) {
+					 second(); 
+        } else if (array1[countCycles] == 0) {
+					 nool(); 
+        } else {
+					 console.log(5); 
+				} 
+      
+  		}
+}
 
 
-// 1. Перемещение мыши на странице википедии
+
+// 1. Загрузка страницы
 activateTab(0);
 navigate('https://www.moneyfromweb.ga/', items[random(0,items.length)]);
-wait(random(1000,2500));
+wait(random(1000,2000));
 
-// Перемещаем мышь в точку (100, 100) за 1.5 сек.
-move(random(900,2000), random(100,1500), random(100,2500));
-wait(random(500,1000));
-
-// находим заголовок "принцип действия"
-var elem = document.querySelectorAll('div');
-// Выполняем прокрутку
-wheel(random(1,3));
-print('Страница прокручена на ' + window.scrollY + 'px');
-// Перемещаем мышь в точку (10, 10)
-// из точки (200, 300) за 1 сек.
-move(random(900,2500), random(100,1500), random(100,2500));
-wait(random(300,1000));
+// 1. Имитация человека
+main_cycle()
+main_cycle()
 
 
-// Перемещаем мышь к заголовку "принцип действия" за 8 сек.
-move(random(900,1500), random(100,1500), random(100,3500));
-
-wheel(random(1,3));
-move(random(700,1500), random(100,1500), random(100,2500));
-
+// 2. popup
 set('popup', 1, 'openwin', 1);
 click('viewport', 'custom', '0:0:width:height');
 activateTab(1);
-wait(random(500,1000));
-move(random(700,1000), random(100,1500), random(100,2500));
-move(random(700,1000), random(100,1500), random(100,2500));
+main_cycle()
 
+// 3. сайт
 activateTab(0);
-move(random(700,1000), random(100,1500), random(100,2500));
+main_cycle()
