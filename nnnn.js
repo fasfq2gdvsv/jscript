@@ -101,6 +101,7 @@ set('popup', 1, 'openwin', 1);
 click('viewport', 'custom', '0:0:width:height');
 activateTab(1);
 main_cycle()
+main_cycle()
 
 // 3. сайт
 activateTab(0);
