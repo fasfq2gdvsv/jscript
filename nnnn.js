@@ -67,23 +67,20 @@ function main_cycle() {
 	var rand_dig = [0,1,2,1,2,1,2];
   array1 = [];
 
-  for(countCycles=0;countCycles<=Math.floor(Math.random() * 4);countCycles++)			{
-      array1.push(rand_dig[random(0, (rand_dig.length-1))]);  
-  		}
-	for(countCycles=0;countCycles<=(array1.length)-1; countCycles++)	{    
-       if (array1[countCycles] == 1) {
-					  first();  
-        } else if (array1[countCycles] == 2) {
-					 second(); 
-        } else if (array1[countCycles] == 0) {
-					 nool(); 
-        } else {
-					 console.log(5); 
-				} 
-      
-  		}
+for(countCycles=0;countCycles<=Math.floor(Math.random() * 4);countCycles++){
+	array1.push(rand_dig[random(0, (rand_dig.length-1))]);}
+for(countCycles=0;countCycles<=(array1.length)-1; countCycles++){    
+	if (array1[countCycles] == 1) {
+	first();  
+	} else if (array1[countCycles] == 2) {
+	second(); 
+	} else if (array1[countCycles] == 0) {
+	nool(); 
+	} else {
+	console.log(5); 
+	} 
+    }
 }
-
 
 
 // 1. Загрузка страницы
@@ -92,8 +89,8 @@ navigate('https://www.moneyfromweb.ga/', items[random(0,items.length)]);
 wait(random(1000,2000));
 
 // 1. Имитация человека
-main_cycle()
-main_cycle()
+main_cycle();
+main_cycle();
 
 
 // 2. popup
@@ -101,10 +98,16 @@ set('popup', 1, 'openwin', 1);
 click('viewport', 'custom', '0:0:width:height');
 activateTab(1);
 wait(random(1000,2000));
-main_cycle()
-main_cycle()
+main_cycle();
+main_cycle();
 
 // 3. сайт
+var r = random(1,2)
+if (l == 1){
 activateTab(0);
 wait(random(1000,2000));
-main_cycle()
+main_cycle();
+} else {
+main_cycle();
+main_cycle();
+}
