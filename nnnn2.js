@@ -72,7 +72,7 @@ wheel(random(1,4));
 set('popup', 1, 'openwin', 1);
 click('viewport', 'custom', '0:0:width:height');
 activateTab(1);
-wait(random(500,1000));
+wait(random(1500,2000));
 move(random(700,1000), random(100,1500), random(50,3500));
 move(random(700,1000), random(100,1500), random(50,3500));
 move(random(700,1500), random(100,1500), random(50,3500));
